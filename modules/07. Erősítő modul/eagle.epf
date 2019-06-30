@@ -341,7 +341,6 @@ UsedLibrary="C:/Program Files (x86)/EAGLE-6.5.0/lbr/xilinx-xc9.lbr"
 UsedLibrary="C:/Program Files (x86)/EAGLE-6.5.0/lbr/xilinx-xcv.lbr"
 UsedLibrary="C:/Program Files (x86)/EAGLE-6.5.0/lbr/zetex.lbr"
 UsedLibrary="C:/Program Files (x86)/EAGLE-6.5.0/lbr/zilog.lbr"
-UsedLibrary="C:/Users/Szlatyka/Documents/GIT/GYW-Electro-Curriculum/lib/ganzlib.lbr"
 UsedLibrary="C:/Program Files (x86)/EAGLE-6.5.0/lbr/SparkFun-Eagle-Libraries-master/SparkFun-AnalogIC.lbr"
 UsedLibrary="C:/Program Files (x86)/EAGLE-6.5.0/lbr/SparkFun-Eagle-Libraries-master/SparkFun-Boards.lbr"
 UsedLibrary="C:/Program Files (x86)/EAGLE-6.5.0/lbr/SparkFun-Eagle-Libraries-master/SparkFun-Capacitors.lbr"
@@ -358,14 +357,17 @@ UsedLibrary="C:/Program Files (x86)/EAGLE-6.5.0/lbr/SparkFun-Eagle-Libraries-mas
 UsedLibrary="C:/Program Files (x86)/EAGLE-6.5.0/lbr/SparkFun-Eagle-Libraries-master/SparkFun-Retired.lbr"
 UsedLibrary="C:/Program Files (x86)/EAGLE-6.5.0/lbr/SparkFun-Eagle-Libraries-master/SparkFun-RF.lbr"
 UsedLibrary="C:/Program Files (x86)/EAGLE-6.5.0/lbr/SparkFun-Eagle-Libraries-master/SparkFun-Sensors.lbr"
+UsedLibrary="C:/Users/Szlatyka/Documents/eagle/GANZduino/con-ganz.lbr"
+UsedLibrary="C:/Users/Szlatyka/Documents/eagle/Ganz tananyag/_LIB/ganz.lbr"
+UsedLibrary="C:/Users/Szlatyka/Documents/eagle/Ganz tananyag/_LIB/ganzlib.lbr"
 
 [Win_1]
 Type="Schematic Editor"
-Loc="652 321 1251 720"
+Loc="332 261 931 660"
 State=2
-Number=1
-File="3.5mm.sch"
-View="-74.3112 -42.2056 197.293 144.868"
+Number=2
+File="erősítő.sch"
+View="-0.335278 7.95761 142.575 91.6635"
 WireWidths=" 0 0.3048 0.6096 0.8128 1.016 1.27 1.4224 1.6764 1.778 1.9304 2.1844 2.54 3.81 6.4516 0.4064 0.1524"
 PadDiameters=" 0.254 0.3048 0.4064 0.6096 0.8128 1.016 1.27 1.4224 1.6764 1.778 1.9304 2.1844 2.54 3.81 6.4516 0"
 PadDrills=" 0.5 0.6 0.7 0.9 1 1.1 1.2 1.3 1.4 1.5 1.6 2 2.2 2.8 3.2 0.8"
@@ -408,11 +410,11 @@ Sheet=1
 
 [Win_2]
 Type="Control Panel"
-Loc="652 321 1251 720"
+Loc="332 261 931 660"
 State=1
 Number=0
 
 [Desktop]
-Screen="1920 1080"
+Screen="1280 960"
 Window="Win_1"
 Window="Win_2"
