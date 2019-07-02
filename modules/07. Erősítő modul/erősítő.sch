@@ -11483,7 +11483,7 @@ DIN A4, landscape with location and doc. field</description>
 <sheet>
 <plain>
 <text x="157.48" y="-15.24" size="2.54" layer="94" font="vector">Elosztó modul</text>
-<text x="101.6" y="-12.7" size="2.54" layer="94" font="vector" align="top-left">Tervezö: Kimmel Gábor
+<text x="101.6" y="-12.7" size="2.54" layer="94" font="vector" align="top-left">Tervezö: Balázs Lajos
 Rajzoló: Kimmel Gábor</text>
 <text x="187.96" y="-27.94" size="2.54" layer="94" font="vector" align="top-left">v1</text>
 </plain>
