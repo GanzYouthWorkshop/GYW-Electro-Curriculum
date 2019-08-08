@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.5.0">
+<eagle version="9.0.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
+<setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.025" altunitdist="inch" altunit="inch"/>
@@ -36,7 +37,7 @@
 <layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="27" name="tValues" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="28" name="bValues" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
+<layer number="29" name="tStop" color="7" fill="3" visible="yes" active="yes"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
 <layer number="31" name="tCream" color="7" fill="4" visible="no" active="yes"/>
 <layer number="32" name="bCream" color="7" fill="5" visible="no" active="yes"/>
@@ -142,6 +143,7 @@
 <wire x1="43.16" y1="1.27" x2="43.16" y2="47.93" width="0" layer="20"/>
 <wire x1="43.16" y1="47.93" x2="-2.54" y2="47.93" width="0" layer="20"/>
 <wire x1="-2.54" y1="47.93" x2="-2.54" y2="1.27" width="0" layer="20"/>
+<rectangle x1="7.62" y1="-5.08" x2="29.21" y2="1.27" layer="29"/>
 </plain>
 <libraries>
 <library name="maxim">
@@ -1717,16 +1719,20 @@ design rules under a new name.</description>
 <param name="slThermalsForVias" value="0"/>
 <param name="dpMaxLengthDifference" value="10mm"/>
 <param name="dpGapFactor" value="2.5"/>
-<param name="checkGrid" value="0"/>
 <param name="checkAngle" value="0"/>
 <param name="checkFont" value="1"/>
 <param name="checkRestrict" value="1"/>
+<param name="checkStop" value="0"/>
+<param name="checkValues" value="0"/>
 <param name="useDiameter" value="13"/>
 <param name="maxErrors" value="50"/>
 </designrules>
 <autorouter>
 <pass name="Default">
 <param name="RoutingGrid" value="50mil"/>
+<param name="AutoGrid" value="1"/>
+<param name="Efforts" value="0"/>
+<param name="TopRouterVariant" value="1"/>
 <param name="tpViaShape" value="round"/>
 <param name="PrefDir.1" value="|"/>
 <param name="PrefDir.2" value="0"/>
@@ -1819,20 +1825,20 @@ design rules under a new name.</description>
 </autorouter>
 <elements>
 <element name="IC1" library="maxim" package="DIL08" value="555" x="27.94" y="36.83" smashed="yes" rot="R90">
-<attribute name="OC_NEWARK" value="68K4387" x="82.55" y="55.88" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="MPN" value="ICM7555IPA+" x="82.55" y="55.88" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MF" value="MAXIM" x="82.55" y="55.88" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="OC_FARNELL" value="9663762" x="82.55" y="55.88" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MPN" value="ICM7555IPA+" x="82.55" y="55.88" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="NAME" x="30.861" y="31.496" size="1.27" layer="25" ratio="10" rot="R180"/>
+<attribute name="OC_FARNELL" value="9663762" x="82.55" y="55.88" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="OC_NEWARK" value="68K4387" x="82.55" y="55.88" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="VALUE" x="28.575" y="34.544" size="1.27" layer="27" ratio="10" rot="R90"/>
 </element>
 <element name="R1" library="resistor" package="0309/12" value="1k" x="24.13" y="24.13" rot="R90"/>
 <element name="R3" library="ganz_pot" package="GANZ_POT" value="100k" x="19.05" y="40.64" rot="R90"/>
 <element name="SV1" library="con-lstb" package="MA03-1" value="" x="13.97" y="25.4" rot="R90">
-<attribute name="OC_NEWARK" value="unknown" x="64.77" y="67.31" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="MPN" value="" x="64.77" y="67.31" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MF" value="" x="64.77" y="67.31" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MPN" value="" x="64.77" y="67.31" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="OC_FARNELL" value="unknown" x="64.77" y="67.31" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="OC_NEWARK" value="unknown" x="64.77" y="67.31" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
 <element name="C1" library="resistor" package="C075-032X103" value="10n" x="31.75" y="25.4" rot="R90"/>
 <element name="R2" library="resistor" package="0309/12" value="1k" x="13.97" y="36.83" rot="R270"/>
@@ -1843,10 +1849,10 @@ design rules under a new name.</description>
 <attribute name="VALUE" x="29.972" y="9.906" size="1.27" layer="27" ratio="10" rot="R270"/>
 </element>
 <element name="SV2" library="con-lstb" package="MA03-1" value="" x="13.97" y="15.24" rot="R90">
-<attribute name="OC_NEWARK" value="unknown" x="13.97" y="15.24" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="MPN" value="" x="13.97" y="15.24" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MF" value="" x="13.97" y="15.24" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MPN" value="" x="13.97" y="15.24" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="OC_FARNELL" value="unknown" x="13.97" y="15.24" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="OC_NEWARK" value="unknown" x="13.97" y="15.24" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
 <element name="S1" library="SparkFun-Electromechanical" package="TACTILE-PTH" value="" x="10.16" y="6.35" rot="R270"/>
 </elements>
